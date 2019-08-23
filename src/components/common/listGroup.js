@@ -1,6 +1,8 @@
 import React from "react";
 
 const ListGroup = props => {
+  let first = false;
+
   const {
     items,
     textProperty,
@@ -10,11 +12,12 @@ const ListGroup = props => {
   } = props;
 
   return (
-    <ul className="list-group" style={{ cursor: "pointer" }}>
+    <ul className="list-group">
       {items.map(item => (
         <li
           onClick={() => onItemSelect(item)}
           key={!item[valueProperty] ? "0" : item[valueProperty]}
+          style={{ cursor: "pointer" }}
           className={
             item === selectedItem ? "list-group-item active" : "list-group-item"
           }
