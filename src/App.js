@@ -7,6 +7,10 @@ import NotFound from "./components/notFound";
 import NavBar from "./components/navBar";
 import MovieForm from "./components/movieForm";
 import LoginForm from "./components/loginForm";
+<<<<<<< Updated upstream
+=======
+import RegisterForm from "./components/registerForm";
+>>>>>>> Stashed changes
 import "./App.css";
 
 function App() {
@@ -15,6 +19,10 @@ function App() {
       <NavBar />
       <main className="container">
         <Switch>
+<<<<<<< Updated upstream
+=======
+          <Route path="/register" component={RegisterForm} />
+>>>>>>> Stashed changes
           <Route path="/login" component={LoginForm} />
           <Route path="/movies/:id" component={MovieForm} />
           <Route path="/movies" component={Movies} />
